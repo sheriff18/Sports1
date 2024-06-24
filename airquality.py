@@ -1,13 +1,16 @@
 import requests
+
 import json
 
-API_TOKEN = 'your_api_token_here'
-CITY = 'your_city_here'
+API_TOKEN = '94db1f42579e34a3c357d1440494421224d080f0'
+CITY = 'accra'
 
 # Fetch data from the API
 url = f'https://api.waqi.info/feed/{CITY}/?token={API_TOKEN}'
 response = requests.get(url)
 data = response.json()
+
+print(data)
 
 # Extract relevant data
 if data['status'] == 'ok':
